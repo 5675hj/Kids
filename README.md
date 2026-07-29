@@ -1,1 +1,1582 @@
-# Kids
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>KiddiesFav Baby & Toy Shop | Nigeria's No.1 Luxury Kids Toy Store</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-blue: #0A84FF;
+            --primary-orange: #FF7A00;
+            --accent-gradient: linear-gradient(135deg, #0A84FF 0%, #FF7A00 100%);
+            --blue-soft-gradient: linear-gradient(135deg, #EBF5FF 0%, #FFF5EB 100%);
+            --dark-text: #1C1C1E;
+            --light-text: #6E6E73;
+            --white: #FFFFFF;
+            --glass-bg: rgba(255, 255, 255, 0.85);
+            --glass-border: rgba(255, 255, 255, 0.6);
+            --card-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+            --floating-shadow: 0 10px 30px rgba(10, 132, 255, 0.2);
+            --radius-lg: 24px;
+            --radius-md: 16px;
+            --radius-sm: 12px;
+            --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            --font-heading: 'Fredoka', cursive, sans-serif;
+        }
+
+        /* Base Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: var(--font-main);
+            scroll-behavior: smooth;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: #F8FAFC;
+            color: var(--dark-text);
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: var(--font-heading);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-blue);
+            border-radius: 10px;
+        }
+
+        /* Glassmorphism Styles with Fallbacks */
+        .glass-card {
+            background: #FFFFFF;
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--card-shadow);
+            border-radius: var(--radius-lg);
+        }
+
+        /* Utility Components */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 0.95rem;
+            min-height: 48px;
+        }
+
+        .btn-primary {
+            background: var(--accent-gradient);
+            color: var(--white);
+            box-shadow: var(--floating-shadow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(255, 122, 0, 0.3);
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: var(--white);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-3px);
+            background: #20ba5a;
+        }
+
+        .btn-secondary {
+            background: rgba(10, 132, 255, 0.1);
+            color: var(--primary-blue);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(10, 132, 255, 0.2);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark-text);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--light-text);
+            font-size: 1.1rem;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background: var(--dark-text);
+            color: var(--white);
+            padding: 10px 15px;
+            font-size: 0.85rem;
+            text-align: center;
+        }
+
+        /* Navigation */
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            padding: 15px 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--primary-orange);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-text);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-orange);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .cart-icon {
+            position: relative;
+            cursor: pointer;
+            font-size: 1.4rem;
+            color: var(--dark-text);
+            padding: 5px;
+        }
+
+        .cart-badge {
+            position: absolute;
+            top: -5px;
+            right: -8px;
+            background: var(--primary-orange);
+            color: var(--white);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 1.6rem;
+            cursor: pointer;
+            color: var(--dark-text);
+            padding: 5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            padding: 60px 0 80px;
+            background: var(--blue-soft-gradient);
+            overflow: hidden;
+        }
+
+        .hero-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.2rem;
+            line-height: 1.15;
+            color: var(--dark-text);
+            margin-bottom: 20px;
+        }
+
+        .hero-content h1 span {
+            color: var(--primary-blue);
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-content p {
+            font-size: 1.15rem;
+            color: var(--light-text);
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image-main {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: var(--radius-lg);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            animation: float 6s ease-in-out infinite;
+            object-fit: cover;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        /* Filter Controls */
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 20px;
+            border-radius: 30px;
+            border: 1px solid rgba(10, 132, 255, 0.2);
+            background: var(--white);
+            color: var(--dark-text);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary-blue);
+            color: var(--white);
+            border-color: var(--primary-blue);
+        }
+
+        /* Categories Section */
+        .categories {
+            padding: 80px 0;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .category-card {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+            border-radius: var(--radius-lg);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .category-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .category-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .category-card:hover img {
+            transform: scale(1.08);
+        }
+
+        .category-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 60%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 25px;
+            color: var(--white);
+        }
+
+        .category-overlay h3 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        /* Products Section */
+        .products {
+            padding: 80px 0;
+            background: #FFF;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+        }
+
+        .badge-sale {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            background: var(--primary-orange);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.75rem;
+            z-index: 2;
+        }
+
+        .product-img-wrap {
+            position: relative;
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            border-radius: var(--radius-md);
+            margin-bottom: 15px;
+            background: #F8FAFC;
+        }
+
+        .product-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover .product-img-wrap img {
+            transform: scale(1.05);
+        }
+
+        .product-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--dark-text);
+        }
+
+        .product-desc {
+            font-size: 0.85rem;
+            color: var(--light-text);
+            margin-bottom: 12px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .product-price {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: auto;
+        }
+
+        .product-actions button {
+            flex: 1;
+            padding: 10px;
+            font-size: 0.85rem;
+        }
+
+        /* Features / Why Choose Us */
+        .features {
+            padding: 80px 0;
+            background: var(--blue-soft-gradient);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .feature-box {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: var(--accent-gradient);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin: 0 auto 20px;
+            box-shadow: var(--floating-shadow);
+        }
+
+        .feature-box h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .feature-box p {
+            color: var(--light-text);
+            font-size: 0.9rem;
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 60px 0;
+            background: var(--dark-text);
+            color: var(--white);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: var(--primary-orange);
+            margin-bottom: 5px;
+        }
+
+        .stat-item p {
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+
+        /* Gallery */
+        .gallery {
+            padding: 80px 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            height: 250px;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background: #FFF;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .review-card {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .stars {
+            color: #FFD700;
+        }
+
+        .reviewer-profile {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: auto;
+        }
+
+        .reviewer-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 80px 0;
+            background: var(--blue-soft-gradient);
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: var(--radius-md);
+            margin-bottom: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            cursor: pointer;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+            font-size: 1.05rem;
+        }
+
+        .faq-answer {
+            margin-top: 10px;
+            color: var(--light-text);
+            display: none;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* Contact & Map */
+        .contact {
+            padding: 80px 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .map-placeholder {
+            width: 100%;
+            height: 100%;
+            min-height: 280px;
+            border-radius: var(--radius-lg);
+            background: #E2E8F0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--light-text);
+            font-weight: bold;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Cart & Checkout Modal Sliders */
+        .modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            z-index: 2000;
+            display: none;
+            justify-content: flex-end;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .cart-sidebar {
+            width: 100%;
+            max-width: 450px;
+            background: var(--white);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+            overflow-y: auto;
+        }
+
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #EEE;
+            padding-bottom: 15px;
+        }
+
+        .cart-items {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            overflow-y: auto;
+        }
+
+        .cart-item {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            border-bottom: 1px solid #F1F5F9;
+            padding-bottom: 15px;
+        }
+
+        .cart-item img {
+            width: 70px;
+            height: 70px;
+            border-radius: var(--radius-sm);
+            object-fit: cover;
+        }
+
+        .cart-item-details {
+            flex: 1;
+        }
+
+        .cart-item-title {
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        .cart-item-price {
+            color: var(--primary-blue);
+            font-weight: 800;
+        }
+
+        .qty-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        .qty-btn {
+            background: #F1F5F9;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cart-footer {
+            margin-top: 20px;
+            border-top: 1px solid #EEE;
+            padding-top: 20px;
+        }
+
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        /* Checkout Modal Adjustment */
+        .checkout-modal-wrap {
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .checkout-modal {
+            max-width: 550px;
+            width: 100%;
+            margin: auto;
+            border-radius: var(--radius-lg);
+            height: auto;
+            max-height: 90vh;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #E2E8F0;
+            border-radius: var(--radius-sm);
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: var(--primary-blue);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-text);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--primary-orange);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #A0AEC0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            color: #A0AEC0;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive Breakpoints & Mobile Menu Fixes */
+        @media (max-width: 992px) {
+            .hero-wrapper {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .hero-buttons {
+                justify-content: center;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #FFFFFF;
+                padding: 20px;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+                gap: 15px;
+                border-bottom: 1px solid #EEE;
+            }
+
+            .nav-links.mobile-active {
+                display: flex;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .hero-content h1 {
+                font-size: 2.3rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Announcement Bar -->
+    <div class="top-bar">
+        ✨ Free Nationwide Delivery on Orders Above ₦250,000 | 100% Original Toys Guarantee!
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo"><i class="fa-solid fa-car-side"></i> Kiddies<span>Fav</span></a>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" onclick="closeMobileMenu()">Home</a></li>
+                <li><a href="#categories" onclick="closeMobileMenu()">Categories</a></li>
+                <li><a href="#products" onclick="closeMobileMenu()">Shop Toys</a></li>
+                <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+                <li><a href="#reviews" onclick="closeMobileMenu()">Reviews</a></li>
+                <li><a href="#gallery" onclick="closeMobileMenu()">Gallery</a></li>
+                <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="cart-icon" onclick="toggleCart(true)">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </div>
+                <i class="fa-solid fa-bars mobile-toggle" onclick="toggleMobileMenu()"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-wrapper">
+            <div class="hero-content">
+                <h1>Nigeria's No.1 <span>Luxury Kids</span> Toy Store</h1>
+                <p>Ride-on Cars • Baby Toys • Electric Cars • Scooters • Bicycles • Birthday Gifts</p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-primary"><i class="fa-solid fa-cart-shopping"></i> Shop Now</a>
+                    <a href="https://wa.me/2340000000000" class="btn btn-whatsapp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp Order</a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <img src="https://i.ibb.co/6JHGM81h/Mercedes-Benz-Girls-Ride-On-Car-12-V-Licensed-Electric-Cars-Motorized-Vehicles-for-Boys-Remote-Contro.png" alt="Mercedes Benz Girls Ride On Car" class="hero-image-main">
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <div class="section-title">
+                <h2>Browse Categories</h2>
+                <p>Explore luxury toys curated for every age & adventure</p>
+            </div>
+            <div class="category-grid">
+                <div class="category-card glass-card" onclick="filterCategory('Ride-on')">
+                    <img src="https://i.ibb.co/VWnsypG0/Kids-White-Licensed-4-WD-Mercedes-X-Class-24v-Ride-on-Pick-Up-2-32673-1708008406.png" alt="Ride-on Cars">
+                    <div class="category-overlay">
+                        <h3>🚗 Ride-on Cars</h3>
+                        <p>Luxury 12V & 24V Powered Ride-ons</p>
+                    </div>
+                </div>
+                <div class="category-card glass-card" onclick="filterCategory('Bicycles')">
+                    <img src="https://i.ibb.co/xSnv5Pq7/20190927-210543.jpg" alt="Bicycles & Scooters">
+                    <div class="category-overlay">
+                        <h3>🚲 Bicycles & Scooters</h3>
+                        <p>Premium Outdoor Rides</p>
+                    </div>
+                </div>
+                <div class="category-card glass-card" onclick="filterCategory('Baby')">
+                    <img src="https://i.ibb.co/XZ4HPFjL/20190315-201856.jpg" alt="Baby Toys">
+                    <div class="category-overlay">
+                        <h3>🧸 Baby Toys & Essentials</h3>
+                        <p>Safe, Educational & Fun</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Products</h2>
+                <p>Handpicked luxury electric rides, strollers, & interactive toys</p>
+            </div>
+
+            <div class="filter-tabs">
+                <button class="filter-btn active" onclick="filterCategory('All', this)">All Toys</button>
+                <button class="filter-btn" onclick="filterCategory('Ride-on', this)">Ride-on Cars</button>
+                <button class="filter-btn" onclick="filterCategory('Bicycles', this)">Bicycles & Scooters</button>
+                <button class="filter-btn" onclick="filterCategory('Baby', this)">Baby & Essentials</button>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <!-- Products dynamically rendered via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose KiddiesFav?</h2>
+                <p>Delivering unforgettable childhood memories with unmatched quality</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-box glass-card">
+                    <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h4>100% Original Products</h4>
+                    <p>Authentic, licensed ride-ons and certified baby products direct from global manufacturers.</p>
+                </div>
+                <div class="feature-box glass-card">
+                    <div class="feature-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                    <h4>Nationwide Delivery</h4>
+                    <p>Fast and safe door-to-door delivery across all 36 states in Nigeria.</p>
+                </div>
+                <div class="feature-box glass-card">
+                    <div class="feature-icon"><i class="fa-solid fa-headset"></i></div>
+                    <h4>24/7 VIP Support</h4>
+                    <p>Dedicated customer care team available to assist with inquiries & assembly guides.</p>
+                </div>
+                <div class="feature-box glass-card">
+                    <div class="feature-icon"><i class="fa-solid fa-award"></i></div>
+                    <h4>Luxury Showroom Quality</h4>
+                    <p>Top-tier craftsmanship ensures long durability, maximum safety, and fun.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>95,000+</h3>
+                    <p>Happy Children</p>
+                </div>
+                <div class="stat-item">
+                    <h3>20,000+</h3>
+                    <p>Products Delivered</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100+</h3>
+                    <p>Premium Brands</p>
+                </div>
+                <div class="stat-item">
+                    <h3>36 States</h3>
+                    <p>Nationwide Coverage</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="products" id="about" style="background: #FAFAFA;">
+        <div class="container">
+            <div class="hero-wrapper">
+                <div>
+                    <img src="https://i.ibb.co/SwTszpzj/Screenshot-20260725-011836-Instagram.jpg" alt="About KiddiesFav" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--card-shadow);">
+                </div>
+                <div>
+                    <h2 style="font-size: 2.2rem; margin-bottom: 20px;">Nigeria's Trusted Luxury Toy Store</h2>
+                    <p style="color: var(--light-text); line-height: 1.8; margin-bottom: 20px;">
+                        At <strong>KiddiesFav</strong>, we believe every child deserves the magic of extraordinary play. We specialize in bringing world-class luxury ride-on cars, electric vehicles, bicycles, scooters, educational baby toys, and luxury birthday gifts right to your doorstep anywhere in Nigeria.
+                    </p>
+                    <p style="color: var(--light-text); line-height: 1.8; margin-bottom: 25px;">
+                        Each product in our catalogue is rigorously vetted for safety, functionality, and aesthetic appeal—ensuring your little ones enjoy unforgettable moments with high-grade toys built to last.
+                    </p>
+                    <a href="#products" class="btn btn-primary">Explore Our Collection</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Gallery</h2>
+                <p>Moments of joy from our happy young drivers and parents</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://i.ibb.co/6JHGM81h/Mercedes-Benz-Girls-Ride-On-Car-12-V-Licensed-Electric-Cars-Motorized-Vehicles-for-Boys-Remote-Contro.png" alt="Gallery item">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.ibb.co/VWnsypG0/Kids-White-Licensed-4-WD-Mercedes-X-Class-24v-Ride-on-Pick-Up-2-32673-1708008406.png" alt="Gallery item">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.ibb.co/xSnv5Pq7/20190927-210543.jpg" alt="Gallery item">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.ibb.co/XZ4HPFjL/20190315-201856.jpg" alt="Gallery item">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.ibb.co/SwTszpzj/Screenshot-20260725-011836-Instagram.jpg" alt="Gallery item">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.ibb.co/d4FwwD5B/Screenshot-20260725-011829-Instagram.jpg" alt="Gallery item">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="testimonials" id="reviews">
+        <div class="container">
+            <div class="section-title">
+                <h2>Loved By Thousands</h2>
+                <p>See what parents across Nigeria are saying about KiddiesFav</p>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card glass-card">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p>"The Mercedes Ride-On Car is pure luxury! My daughter was ecstatic on her 4th birthday. Delivery to Abuja was smooth and fully intact."</p>
+                    <div class="reviewer-profile">
+                        <img src="https://i.ibb.co/d4FwwD5B/Screenshot-20260725-011829-Instagram.jpg" class="reviewer-img" alt="Mrs. Adebayo">
+                        <div>
+                            <h4 style="font-size: 0.95rem;">Mrs. Adebayo</h4>
+                            <p style="font-size: 0.8rem; color: var(--light-text);">Abuja, Nigeria</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card glass-card">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p>"Extremely fast WhatsApp response and order processing. The electric 4WD vehicle works exceptionally well. Highly recommended store!"</p>
+                    <div class="reviewer-profile">
+                        <img src="https://i.ibb.co/SwTszpzj/Screenshot-20260725-011836-Instagram.jpg" class="reviewer-img" alt="Dr. Chukwuma">
+                        <div>
+                            <h4 style="font-size: 0.95rem;">Dr. Chukwuma</h4>
+                            <p style="font-size: 0.8rem; color: var(--light-text);">Lagos, Nigeria</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Got questions? We're here to clear everything up!</p>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">Do you deliver nationwide in Nigeria? <i class="fa-solid fa-chevron-down"></i></div>
+                    <div class="faq-answer">Yes! We deliver quickly and securely to all 36 states in Nigeria including Lagos, Abuja, Port Harcourt, Kano, and Enugu.</div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">How long does delivery take? <i class="fa-solid fa-chevron-down"></i></div>
+                    <div class="faq-answer">Delivery within Lagos takes 24-48 hours. Orders to other states typically take 2-4 business days.</div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">Can I order directly through WhatsApp? <i class="fa-solid fa-chevron-down"></i></div>
+                    <div class="faq-answer">Absolutely! You can place orders directly on our platform or press the "WhatsApp Order" button to connect with our team.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Map Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>Visit our showroom or chat directly with our team</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="glass-card" style="padding: 25px;">
+                        <i class="fa-solid fa-location-dot" style="color: var(--primary-orange); font-size: 1.5rem; margin-bottom: 10px;"></i>
+                        <h4>Our Showroom Location</h4>
+                        <p style="color: var(--light-text);">Victoria Island / Lekki Phase 1, Lagos, Nigeria</p>
+                    </div>
+                    <div class="glass-card" style="padding: 25px;">
+                        <i class="fa-solid fa-phone" style="color: var(--primary-blue); font-size: 1.5rem; margin-bottom: 10px;"></i>
+                        <h4>Call / WhatsApp</h4>
+                        <p style="color: var(--light-text);">+234 (0) 800 543 3437</p>
+                    </div>
+                    <div class="glass-card" style="padding: 25px;">
+                        <i class="fa-solid fa-envelope" style="color: var(--primary-orange); font-size: 1.5rem; margin-bottom: 10px;"></i>
+                        <h4>Email Support</h4>
+                        <p style="color: var(--light-text);">support@kiddiesfav.ng</p>
+                    </div>
+                </div>
+                <div class="map-placeholder">
+                    <i class="fa-solid fa-map-location-dot" style="font-size: 2.5rem; margin-bottom: 10px;"></i>
+                    <p>Interactive Showroom Map Placeholder</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Drawer Modal -->
+    <div class="modal" id="cartModal" onclick="handleModalBackdropClick(event, 'cartModal')">
+        <div class="cart-sidebar">
+            <div class="cart-header">
+                <h3>Your Shopping Bag</h3>
+                <i class="fa-solid fa-xmark" style="cursor: pointer; font-size: 1.4rem;" onclick="toggleCart(false)"></i>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items load here dynamically -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotalAmount">₦0</span>
+                </div>
+                <button class="btn btn-primary" style="width: 100%;" onclick="openCheckout()">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal checkout-modal-wrap" id="checkoutModal" onclick="handleModalBackdropClick(event, 'checkoutModal')">
+        <div class="cart-sidebar checkout-modal">
+            <div class="cart-header">
+                <h3>Complete Your Order</h3>
+                <i class="fa-solid fa-xmark" style="cursor: pointer; font-size: 1.4rem;" onclick="closeCheckout()"></i>
+            </div>
+            <form id="checkoutForm" onsubmit="handleCheckout(event)" style="overflow-y: auto; padding-right: 5px;">
+                <div class="form-group">
+                    <label for="custName">Full Name</label>
+                    <input type="text" id="custName" required placeholder="e.g. Chief Chinedu Ofe">
+                </div>
+                <div class="form-group">
+                    <label for="custPhone">Phone Number</label>
+                    <input type="tel" id="custPhone" required placeholder="e.g. 08012345678">
+                </div>
+                <div class="form-group">
+                    <label for="custAddress">Delivery Address</label>
+                    <textarea id="custAddress" required rows="2" placeholder="Street Address"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="custState">State</label>
+                    <input type="text" id="custState" required placeholder="e.g. Lagos State">
+                </div>
+                <div class="form-group">
+                    <label for="payMethod">Payment Method</label>
+                    <select id="payMethod">
+                        <option>WhatsApp Direct Order</option>
+                        <option>Bank Transfer on Delivery</option>
+                        <option>Cash on Delivery</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-whatsapp" style="width: 100%; margin-top: 15px;">
+                    <i class="fa-brands fa-whatsapp"></i> Send Order to WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo" style="color: var(--white); margin-bottom: 15px; display: inline-block;">Kiddies<span>Fav</span></a>
+                    <p style="color: #A0AEC0; font-size: 0.9rem; line-height: 1.6;">
+                        Nigeria's premier online store for luxury kids' ride-on vehicles, baby products, and premium birthday gifts.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#products">Shop</a></li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Customer Care</h4>
+                    <ul>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact Support</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div style="display: flex; gap: 15px; font-size: 1.3rem; margin-top: 10px;">
+                        <a href="#" style="color: white;" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" style="color: white;" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" style="color: white;" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 KiddiesFav Baby & Toy Shop. All Rights Reserved. Luxury E-Commerce Experience.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Products Database
+        const products = [
+            {
+                id: 1,
+                name: "Mercedes-Benz Girls 12V Electric Ride-On",
+                category: "Ride-on",
+                price: 285000,
+                image: "https://i.ibb.co/6JHGM81h/Mercedes-Benz-Girls-Ride-On-Car-12-V-Licensed-Electric-Cars-Motorized-Vehicles-for-Boys-Remote-Contro.png",
+                desc: "Official Licensed Mercedes-Benz motorized vehicle equipped with remote control, leather seat & LED lights."
+            },
+            {
+                id: 2,
+                name: "Mercedes X-Class 24V Licensed 4WD Pickup",
+                category: "Ride-on",
+                price: 395000,
+                image: "https://i.ibb.co/VWnsypG0/Kids-White-Licensed-4-WD-Mercedes-X-Class-24v-Ride-on-Pick-Up-2-32673-1708008406.png",
+                desc: "Heavy-duty 4WD ride-on pickup with dual seats, realistic engine sound, and Bluetooth connection."
+            },
+            {
+                id: 3,
+                name: "Ultra-Lightweight Premium Baby Stroller",
+                category: "Baby",
+                price: 145000,
+                image: "https://i.ibb.co/XZ4HPFjL/20190315-201856.jpg",
+                desc: "Compact, easy-fold travel stroller with canopy, shock absorbers, and multi-position recline."
+            },
+            {
+                id: 4,
+                name: "Luxury Kids Balance Bike & Helmet Combo",
+                category: "Bicycles",
+                price: 75000,
+                image: "https://i.ibb.co/xSnv5Pq7/20190927-210543.jpg",
+                desc: "Ergonomic balance bicycle designed to promote balance, agility, and outdoor confidence."
+            },
+            {
+                id: 5,
+                name: "Interactive Baby Learning Activity Set",
+                category: "Baby",
+                price: 52000,
+                image: "https://i.ibb.co/SwTszpzj/Screenshot-20260725-011836-Instagram.jpg",
+                desc: "Multi-sensory educational toy set featuring music, lights, and motor skill games."
+            },
+            {
+                id: 6,
+                name: "Deluxe Birthday Gift Box Edition",
+                category: "Baby",
+                price: 88000,
+                image: "https://i.ibb.co/d4FwwD5B/Screenshot-20260725-011829-Instagram.jpg",
+                desc: "Curated luxury gift box collection perfect for birthdays, baby showers, and milestones."
+            }
+        ];
+
+        let cart = [];
+
+        // Navigation Toggle Logic for Mobile Phones
+        function toggleMobileMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('mobile-active');
+        }
+
+        function closeMobileMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.remove('mobile-active');
+        }
+
+        // Render Products with Category Filter
+        function renderProducts(filterCategory = 'All') {
+            const grid = document.getElementById('productsGrid');
+            const filteredProducts = filterCategory === 'All' 
+                ? products 
+                : products.filter(p => p.category === filterCategory);
+
+            if (filteredProducts.length === 0) {
+                grid.innerHTML = `<p style="grid-column: 1/-1; text-align: center; color: var(--light-text); padding: 40px 0;">No products found in this category.</p>`;
+                return;
+            }
+
+            grid.innerHTML = filteredProducts.map(product => `
+                <div class="product-card glass-card">
+                    <span class="badge-sale">Premium</span>
+                    <div class="product-img-wrap">
+                        <img src="${product.image}" alt="${product.name}" loading="lazy">
+                    </div>
+                    <h3 class="product-title">${product.name}</h3>
+                    <p class="product-desc">${product.desc}</p>
+                    <div class="product-price">₦${product.price.toLocaleString()}</div>
+                    <div class="product-actions">
+                        <button class="btn btn-secondary" onclick="addToCart(${product.id})">Add To Cart</button>
+                        <button class="btn btn-primary" onclick="buyNow(${product.id})">Buy Now</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterCategory(cat, btnElement) {
+            if (btnElement) {
+                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                btnElement.classList.add('active');
+            }
+            renderProducts(cat);
+            const section = document.getElementById('products');
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Cart Functions
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            const existing = cart.find(item => item.id === productId);
+
+            if (existing) {
+                existing.qty++;
+            } else {
+                cart.push({ ...product, qty: 1 });
+            }
+
+            updateCartUI();
+            toggleCart(true);
+        }
+
+        function buyNow(productId) {
+            addToCart(productId);
+            openCheckout();
+        }
+
+        function changeQty(productId, delta) {
+            const item = cart.find(i => i.id === productId);
+            if (item) {
+                item.qty += delta;
+                if (item.qty <= 0) {
+                    cart = cart.filter(i => i.id !== productId);
+                }
+            }
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const badge = document.getElementById('cartBadge');
+            const cartItems = document.getElementById('cartItems');
+            const cartTotalAmount = document.getElementById('cartTotalAmount');
+
+            const totalItems = cart.reduce((acc, item) => acc + item.qty, 0);
+            const totalPrice = cart.reduce((acc, item) => acc + (item.price * item.qty), 0);
+
+            badge.innerText = totalItems;
+            cartTotalAmount.innerText = `₦${totalPrice.toLocaleString()}`;
+
+            if (cart.length === 0) {
+                cartItems.innerHTML = `<p style="text-align: center; color: var(--light-text); margin-top: 40px;">Your cart is empty.</p>`;
+                return;
+            }
+
+            cartItems.innerHTML = cart.map(item => `
+                <div class="cart-item">
+                    <img src="${item.image}" alt="${item.name}">
+                    <div class="cart-item-details">
+                        <div class="cart-item-title">${item.name}</div>
+                        <div class="cart-item-price">₦${(item.price * item.qty).toLocaleString()}</div>
+                        <div class="qty-controls">
+                            <button class="qty-btn" onclick="changeQty(${item.id}, -1)" aria-label="Decrease quantity">-</button>
+                            <span>${item.qty}</span>
+                            <button class="qty-btn" onclick="changeQty(${item.id}, 1)" aria-label="Increase quantity">+</button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function toggleCart(forceState) {
+            const modal = document.getElementById('cartModal');
+            if (typeof forceState === 'boolean') {
+                forceState ? modal.classList.add('active') : modal.classList.remove('active');
+            } else {
+                modal.classList.toggle('active');
+            }
+        }
+
+        function openCheckout() {
+            if (cart.length === 0) {
+                alert("Your cart is empty!");
+                return;
+            }
+            toggleCart(false);
+            document.getElementById('checkoutModal').classList.add('active');
+        }
+
+        function closeCheckout() {
+            document.getElementById('checkoutModal').classList.remove('active');
+        }
+
+        function handleModalBackdropClick(event, modalId) {
+            if (event.target.id === modalId) {
+                document.getElementById(modalId).classList.remove('active');
+            }
+        }
+
+        // WhatsApp Checkout Handler
+        function handleCheckout(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('custName').value.trim();
+            const phone = document.getElementById('custPhone').value.trim();
+            const address = document.getElementById('custAddress').value.trim();
+            const state = document.getElementById('custState').value.trim();
+            const payment = document.getElementById('payMethod').value;
+
+            let itemsList = "";
+            let grandTotal = 0;
+
+            cart.forEach((item, index) => {
+                const subtotal = item.price * item.qty;
+                grandTotal += subtotal;
+                itemsList += `${index + 1}. ${item.name} (Qty: ${item.qty}) - ₦${subtotal.toLocaleString()}\n`;
+            });
+
+            const message = `*NEW ORDER - KIDDIESFAV LUXURY STORE*\n\n` +
+                `*Customer Details:*\n` +
+                `👤 Name: ${name}\n` +
+                `📞 Phone: ${phone}\n` +
+                `📍 Address: ${address}, ${state}\n` +
+                `💳 Payment Choice: ${payment}\n\n` +
+                `*Order Items:*\n${itemsList}\n` +
+                `*Total Amount:* ₦${grandTotal.toLocaleString()}\n\n` +
+                `Please confirm my order delivery details. Thank you!`;
+
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/2340000000000?text=${encodedMessage}`;
+
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // FAQ Toggle Logic
+        function toggleFaq(element) {
+            element.classList.toggle('active');
+        }
+
+        // Initialize App
+        window.addEventListener('DOMContentLoaded', () => {
+            renderProducts();
+        });
+    </script>
+</body>
+</html>
